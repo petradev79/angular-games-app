@@ -36,13 +36,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.gameSub = this.httpService
       .getGameList(sort, search)
       .subscribe((gameList: APIResponse<Game>) => {
-        console.log(gameList.results);
         this.games = gameList.results;
       });
   }
 
   openGameDetails(id: number): void {
-    console.log(id);
     this.router.navigate(['details', id]);
   }
 

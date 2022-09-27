@@ -6,6 +6,7 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { config } from 'config';
 
 @Injectable()
 export class HttpHeadersInterceptor implements HttpInterceptor {
@@ -21,7 +22,7 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
         'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com',
       },
       setParams: {
-        key: '4f77d1f257c74b8eb0730eb9887c99cb',
+        key: config.API_KEY,
       },
     });
     return next.handle(req);

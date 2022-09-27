@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { environment } from 'src/environments/environment';
+import API_KEY from '../../../api_key';
 
 @Injectable()
 export class HttpHeadersInterceptor implements HttpInterceptor {
@@ -23,7 +23,7 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
         'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com',
       },
       setParams: {
-        key: environment.API_KEY,
+        key: API_KEY,
       },
     });
     return next.handle(req);

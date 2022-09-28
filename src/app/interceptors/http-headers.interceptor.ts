@@ -8,8 +8,6 @@ import {
 import { Observable } from 'rxjs';
 import api_key from 'api_key';
 
-// import API_KEY from '../../../api_key';
-
 @Injectable()
 export class HttpHeadersInterceptor implements HttpInterceptor {
   constructor() {}
